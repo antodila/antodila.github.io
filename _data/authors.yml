@@ -1,18 +1,9 @@
-# Authors
-
-Name Name:
-  name        : "Name Name"
-  uri         : "https://name.com"
-  email       : "name@name.com"
-  bio         : "This is the first name."
-  avatar      : "bio-photo-2.jpg"
-  twitter     : "name"
-  google_plus : "Name"
-
-Name2 Name2:
-  name        : "Name2 Name2"
-  email       : "name2@name2.com"
-  bio         : "I ordered what?"
-  avatar      : "bio-photo.jpg"
-  twitter     : "name2"
-  google_plus : "Name"
+Antonio Di Lauro:
+  name: "Antonio Di Lauro"
+  avatar: "/images/AntoIm.jpg"   # percorso esatto della tua immagine
+  bio: "MSc student in Information Engineering @ University of Trento.  
+  Interests: Software Engineering, Machine Learning, Distributed Systems, HPC."
+  location: "Trento, Italy"
+  email: "antonio02120212@gmail.com"
+  github: "antodila"
+  linkedin: "antonio-di-lauro-b22905298"
