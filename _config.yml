@@ -3,18 +3,26 @@ name: Antonio Di Lauro
 email: antonio02120212@gmail.com
 description: MSc in Information Engineering @ UniTrento — Software Engineering, ML, Distributed Systems, HPC.
 
-url: "https://antodila.github.io"
-baseurl: ""   # importante: vuoto per il sito utente
+remote_theme: "mmistakes/minimal-mistakes@4.24.0"
 
-# Abilita le collezioni che vuoi usare
+plugins:
+  - jekyll-include-cache
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-remote-theme
+
+# già ok
+url: "https://antodila.github.io"
+baseurl: ""
+
 collections:
   projects:
     output: true
   pages:
     output: true
 
-# (opzionale) plugin supportati da GitHub Pages
-plugins:
-  - jekyll-feed
-  - jekyll-sitemap
-  - jekyll-seo-tag
+# (facoltativo ma utile)
+include:
+  - _pages
+
