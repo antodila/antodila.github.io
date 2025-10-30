@@ -1,9 +1,10 @@
 ---
-layout: collection
+layout: archive
 title: "Projects"
 permalink: /projects/
-collection: projects      # <<< questa riga è la chiave
-entries_layout: grid
-show_excerpts: true
 author_profile: true
 ---
+
+{% for post in site.projects reversed %}
+  {% include archive-single.html %}
+{% endfor %}
