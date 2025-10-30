@@ -8,7 +8,22 @@ baseurl: ""
 
 remote_theme: "mmistakes/minimal-mistakes@4.24.0"
 
-author: "Antonio Di Lauro"   # ← aggiungi questa riga
+author:
+  name: "Antonio Di Lauro"
+  avatar: "/images/AntoIm.jpg"    # assicurati che il file esista esattamente con questo nome e path
+  bio: "MSc in Information Engineering @ UniTrento. Interests: Software Engineering, ML, Distributed Systems, HPC."
+  location: "Trento, Italy"
+  links:
+    - label: "GitHub"
+      icon: "fab fa-github"
+      url: "https://github.com/antodila"
+    - label: "LinkedIn"
+      icon: "fab fa-linkedin"
+      url: "https://www.linkedin.com/in/antonio-di-lauro-b22905298"
+    - label: "Email"
+      icon: "fas fa-envelope"
+      url: "mailto:antonio02120212@gmail.com"
+
 
 plugins:
   - jekyll-include-cache
