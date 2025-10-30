@@ -7,9 +7,9 @@ venue: "Distributed Systems (2024–2025)"
 excerpt: "Peer-to-peer fault-tolerant key–value store with Akka Actors in Java; consistent hashing, 2PC, quorums, read-repair."
 # Header opzionale (metti un'immagine se ce l'hai in /images/projects/)
 header:
+  image: /images/projects/mars-ds-hero.jpg
   overlay_color: "#000"
   overlay_filter: "0.35"
-  image: /images/projects/mars-ds-hero.jpg
 # Link esterni utili
 repo: https://github.com/antodila/<repo-se-pubblico-o-copia>
 demo:
