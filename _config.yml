@@ -10,7 +10,7 @@ remote_theme: "mmistakes/minimal-mistakes@4.24.0"
 
 author:
   name: "Antonio Di Lauro"
-  avatar: "/images/AntoIm.jpg"    # assicurati che il file esista esattamente con questo nome e path
+  avatar: "/assets/images/profile.jpg"
   bio: "MSc in Information Engineering @ UniTrento. Interests: Software Engineering, ML, Distributed Systems, HPC."
   location: "Trento, Italy"
   links:
