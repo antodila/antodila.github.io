@@ -30,7 +30,6 @@ include:
 minimal_mistakes_skin: default
 breadcrumbs: true
 
-# Default per tutte le pagine della collezione "projects"
 defaults:
   - scope:
       path: ""
@@ -41,3 +40,4 @@ defaults:
       classes: wide
       toc: false
       share: false
+
