@@ -2,7 +2,7 @@
 layout: single
 title: "Mars Distributed Storage System"
 collection: projects
-permalink: /projects/mars-ds/
+permalink: /projects/mars-distributed-storage/
 date: 2025-02-01
 venue: "Distributed Systems (2024-2025)"
 excerpt: "Peer-to-peer, fault-tolerant key-value store in Java (Akka Actors): consistent hashing, 2PC, quorum replication, crash/recovery."
