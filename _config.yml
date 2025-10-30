@@ -2,18 +2,19 @@ title: Antonio Di Lauro
 name: Antonio Di Lauro
 email: antonio02120212@gmail.com
 description: MSc in Information Engineering @ UniTrento — Software Engineering, ML, Distributed Systems, HPC.
+
 url: "https://antodila.github.io"
-baseurl: ""          # (vuoto per user site)
-github_username: antodila
-linkedin_username: antonio-di-lauro-b22905298
+baseurl: ""   # importante: vuoto per il sito utente
 
+# Abilita le collezioni che vuoi usare
+collections:
+  projects:
+    output: true
+  pages:
+    output: true
 
-# Disattiva voci che non ti servono ora
-google_scholar: false
-orcid_username: 
-twitter_username:
-
-# Impostazioni estetiche minime (puoi personalizzare in seguito)
-theme_skin: default
-markdown: kramdown
-highlighter: rouge
+# (opzionale) plugin supportati da GitHub Pages
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
