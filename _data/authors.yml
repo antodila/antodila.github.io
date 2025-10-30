@@ -1,8 +1,7 @@
 Antonio Di Lauro:
   name: "Antonio Di Lauro"
-  avatar: "/images/AntoIm.jpg"   # percorso esatto della tua immagine
-  bio: "MSc student in Information Engineering @ University of Trento.  
-  Interests: Software Engineering, Machine Learning, Distributed Systems, HPC."
+  avatar: "/images/AntoIm.jpg"   # percorso assoluto, con stesso nome e maiuscole
+  bio: "MSc in Information Engineering @ UniTrento. Interests: Software Engineering, ML, Distributed Systems, HPC."
   location: "Trento, Italy"
   email: "antonio02120212@gmail.com"
   github: "antodila"
