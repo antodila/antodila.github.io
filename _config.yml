@@ -3,7 +3,12 @@ name: Antonio Di Lauro
 email: antonio02120212@gmail.com
 description: MSc in Information Engineering @ UniTrento — Software Engineering, ML, Distributed Systems, HPC.
 
+url: "https://antodila.github.io"
+baseurl: ""
+
 remote_theme: "mmistakes/minimal-mistakes@4.24.0"
+
+author: "Antonio Di Lauro"   # ← aggiungi questa riga
 
 plugins:
   - jekyll-include-cache
@@ -12,17 +17,11 @@ plugins:
   - jekyll-seo-tag
   - jekyll-remote-theme
 
-# già ok
-url: "https://antodila.github.io"
-baseurl: ""
-
 collections:
   projects:
     output: true
   pages:
     output: true
 
-# (facoltativo ma utile)
 include:
   - _pages
-
