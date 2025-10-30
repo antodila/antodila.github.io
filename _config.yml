@@ -1,7 +1,7 @@
 title: Antonio Di Lauro
 name: Antonio Di Lauro
 email: antonio02120212@gmail.com
-description: MSc in Information Engineering @ UniTrento — Software Engineering, ML, Distributed Systems, HPC.
+description: MSc in Information Engineering at UniTrento — Software Engineering, ML, Distributed Systems, HPC.
 
 url: "https://antodila.github.io"
 baseurl: ""
@@ -11,7 +11,7 @@ remote_theme: "mmistakes/minimal-mistakes@4.24.0"
 author:
   name: "Antonio Di Lauro"
   avatar: "AntoIm.jpg"
-  bio: "MSc in Information Engineering @ UniTrento. Interests: Software Engineering, ML, Distributed Systems, HPC."
+  bio: "MSc in Information Engineering, UniTrento."
   location: "Trento, Italy"
   links:
     - label: "GitHub"
