@@ -26,18 +26,3 @@ collections:
 include:
   - _pages
 
-# Stile e breadcrumb del tema
-minimal_mistakes_skin: default
-breadcrumbs: true
-
-defaults:
-  - scope:
-      path: ""
-      type: projects
-    values:
-      layout: single
-      author_profile: true
-      classes: wide
-      toc: false
-      share: false
-
