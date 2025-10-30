@@ -2,6 +2,7 @@
 layout: single
 title: "About"
 permalink: /
+author_profile: true
 ---
 
 ## Hi, I'm Antonio Di Lauro
@@ -15,4 +16,3 @@ Currently working on academic and applied projects involving Computer Vision, Di
 - LinkedIn: [linkedin.com/in/antonio-di-lauro-b22905298](https://www.linkedin.com/in/antonio-di-lauro-b22905298)
 - Email: [antonio02120212@gmail.com](mailto:antonio02120212@gmail.com)
 
-{% include author-profile.html %}
