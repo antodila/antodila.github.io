@@ -13,7 +13,6 @@ Proof-of-concept of a **peer-to-peer**, fault-tolerant, highly available key-val
 Implements **consistent hashing**, **Two-Phase Commit (2PC)** for atomic writes, and **quorum-based replication (R + W > N)** to guarantee sequential consistency.  
 Includes **node crash/recovery simulation**, **data handoff**, and **read-repair**.
 
-
 {% if page.repo %}
 <p><a class="btn btn--primary btn--small" href="{{ page.repo }}" target="_blank" rel="noopener">GitHub Repo</a></p>
 {% endif %}
