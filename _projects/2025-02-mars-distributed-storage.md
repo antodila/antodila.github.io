@@ -6,7 +6,7 @@ permalink: /projects/mars-ds/
 date: 2025-02-01
 venue: "Distributed Systems (2024-2025)"
 excerpt: "Peer-to-peer, fault-tolerant key-value store in Java (Akka Actors): consistent hashing, 2PC, quorum replication, crash/recovery."
-repo: https://github.com/antodila/mars-distributed-storage-system
+repo: https://github.com/antodila/distributed-systems-project
 ---
 
 Proof-of-concept of a **peer-to-peer**, fault-tolerant, highly available key-value store built in **Java (Akka Actors)**.  
