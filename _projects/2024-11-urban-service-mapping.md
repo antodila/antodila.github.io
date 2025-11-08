@@ -13,5 +13,8 @@ Full-stack webapp for reporting and monitoring urban infrastructure issues in re
 Stack: **Node.js/Express**, **React**, **MongoDB**; cloud deployment on Render.  
 Roles: user reporting, admin management, live status and alternative path suggestions.
 
+{% if page.repo %}
+<p><a class="btn btn--primary btn--small" href="{{ page.repo }}" target="_blank" rel="noopener">GitHub Repo</a></p>
+{% endif %}
 
 <p><a class="btn btn--light-outline btn--small" href="{{ '/projects/' | relative_url }}">← Back to Projects</a></p>
