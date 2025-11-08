@@ -6,8 +6,7 @@ permalink: /projects/urban-service-mapping/
 date: 2024-11-20
 venue: "Software Engineering (2024)"
 excerpt: "Full-stack web application for real-time reporting of urban issues; Node.js/Express, React, MongoDB; cloud deploy."
-repo: "#"   # puoi sostituire con il link GitHub effettivo
-demo: https://ing-software-group14.onrender.com
+repo: "https://github.com/antodila/ing-software-group14"
 ---
 
 Full-stack webapp for reporting and monitoring urban infrastructure issues in real time.  
