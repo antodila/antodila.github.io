@@ -3,7 +3,7 @@ layout: single
 title: "Mars Distributed Storage System"
 collection: projects
 permalink: /projects/mars-ds/
-date: 2025-02-01
+date: 2025-07-3
 venue: "Distributed Systems (2024-2025)"
 excerpt: "Peer-to-peer, fault-tolerant key-value store in Java (Akka Actors): consistent hashing, 2PC, quorum replication, crash/recovery."
 repo: https://github.com/antodila/distributed-systems-project
