@@ -1,22 +1,21 @@
 ---
 layout: single
-title: "Sviluppo di un Digital Twin per l'analisi di copertura wireless in ambienti urbani"
+title: "Digital Twin for Wireless Coverage Analysis"
 collection: projects
 permalink: /projects/bachelor-thesis/
 date: 2024-09-26
 venue: "Bachelor's Thesis, University of Trento (2023-2024)"
-excerpt: "Design and implementation of a robust Client-Server architecture (Android/Java & Python) for reliable voice message transmission over TCP sockets in critical scenarios."
-# repo: https://github.com/antodila/your-repo-if-it-exists
+excerpt: "Development of a Digital Twin to simulate urban wireless coverage using Blender, Mitsuba, and Nvidia Sionna (Ray Tracing)."
+# repo: https://github.com/antodila/your-repo-if-exists
 ---
 
 **Abstract:**
-This thesis addresses the design and development of a voice communication system dedicated to the military sector, where network stability and strict data flow control are critical requirements.
+This thesis focuses on the development of a **Digital Twin** to simulate and analyze wireless signal propagation in complex urban environments. The project bridges 3D modeling and physical layer simulation to create accurate coverage maps.
 
-The project implements a complete **Client-Server** architecture:
-* **Mobile Client (Android/Java):** A custom application handling raw audio acquisition (`MediaRecorder`), encoding, and data packet transmission.
-* **Central Server (Python):** A backend engine built on **TCP Sockets** and **Multithreading** to handle concurrent connections, ensuring the reliable reception and routing of voice messages among field operators.
-
-The work analyzes the challenges of real-time communication over IP networks, transmission buffer management, and the design of a custom application-layer protocol for secure message exchange.
+Key Technologies & Methodologies:
+* **Nvidia Sionna:** Utilized this GPU-accelerated library for physical layer (PHY) simulation and **Ray Tracing** to model radio wave propagation.
+* **Blender & Mitsuba:** Employed for 3D modeling of urban scenes and rendering, creating a high-fidelity digital replica of the target environment.
+* **Python & TensorFlow:** Used for scripting the simulation pipeline, processing data, and generating coverage metrics (e.g., heatmaps, SNR analysis).
 
 {% if page.repo %}
 <p><a class="btn btn--light-outline btn--small" href="{{ page.repo }}" target="_blank" rel="noopener">GitHub Repo</a></p>
