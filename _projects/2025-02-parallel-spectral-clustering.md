@@ -3,8 +3,8 @@ layout: single
 title: "Parallel Spectral Clustering in MPI"
 collection: projects
 permalink: /projects/mpi-spectral-clustering/
-date: 2025-02-10
-venue: "High Performance Computing (2025)"
+date: 2026-01-10
+venue: "High Performance Computing (2026)"
 excerpt: "MPI-based parallel implementation of spectral clustering; similarity matrix distribution, eigen decomposition, scaling tests."
 ---
 
