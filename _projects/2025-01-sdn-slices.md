@@ -3,7 +3,7 @@ layout: single
 title: "On-Demand SDN Slices"
 collection: projects
 permalink: /projects/sdn-slices/
-date: 2025-01-20
+date: 2025-07-13
 venue: "Networking & Cloud Systems (2025)"
 excerpt: "Dynamic network slicing in SDN using Mininet and Ryu; multi-tenant QoS and on-demand provisioning."
 repo: https://github.com/antodila/on-demand-sdn-slices
