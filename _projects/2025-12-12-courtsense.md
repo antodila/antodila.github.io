@@ -3,7 +3,7 @@ layout: single
 title: "Automated Basketball Tactical Analysis (CourtSense)"
 collection: projects
 permalink: /projects/courtsense/
-date: 2025-12-12
+date: 2025-12-08
 venue: "Sport Tech (2025-2026)"
 excerpt: "Interactive tactical dashboard for basketball analysis: Space Ownership (Voronoi), player workload tracking, and hybrid 2D metric estimation using Computer Vision."
 repo: https://github.com/antodila/CourtSense
