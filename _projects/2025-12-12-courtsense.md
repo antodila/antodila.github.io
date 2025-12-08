@@ -13,8 +13,12 @@ Development of a **computer vision-based tactical dashboard** for basketball ana
 The system processes tracking data to generate advanced metrics such as **Space Ownership** (via Voronoi Tessellation), **Team Compactness** (Convex Hull), and dynamic **Off-Ball Movement analysis**.  
 Features a novel **"Hybrid Tracking" engine** that combines pixel-perfect bounding box collision detection for robust **ball possession logic** (filtering "fly-by" errors) with estimated metric conversion for real-world **speed and workload analysis**. Includes a dual-view interface with synchronized video playback and a live **2D tactical radar**.
 
-{% if page.repo %}
-<p><a class="btn btn--primary btn--small" href="{{ page.repo }}" target="_blank" rel="noopener">GitHub Repo</a></p>
-{% endif %}
+<p>
+  {% if page.repo %}
+    <a class="btn btn--primary btn--small" href="{{ page.repo }}" target="_blank" rel="noopener">GitHub Repo</a>
+  {% endif %}
+  
+  <a class="btn btn--primary btn--small" href="https://courtsense.streamlit.app/" target="_blank" rel="noopener">Live Demo (App)</a>
+</p>
 
 <p><a class="btn btn--light-outline btn--small" href="{{ '/projects/' | relative_url }}">← Back to Projects</a></p>
