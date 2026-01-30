@@ -31,11 +31,21 @@ The analysis revealed a critical vulnerability in the current generation of fore
 The study utilized Kernel Density Estimation (KDE) plots to visualize the distribution shift caused by quantization.
 
 <figure style="text-align: center; margin: 20px 0;">
-  <img src="/images/plot_kde_CLIP-D.png" alt="KDE Plot showing distribution shift" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-  <figcaption style="font-size: 0.9em; color: #666; margin-top: 5px;">
-    <img src="/images/plot_kde_NPR.png" alt="KDE Plot showing distribution shift" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-  <figcaption style="font-size: 0.9em; color: #666; margin-top: 5px;">
-    Figure 1-2: The "Distribution Shift". The yellow curve (FP4) shifts left compared to the purple baseline (FP32), indicating that the detector fails to distinguish fake images from real ones under aggressive quantization.
+  <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;">
+    <div style="flex: 1; min-width: 300px;">
+        <img src="/images/plot_kde_CLIP-D.png" alt="KDE Plot CLIP-D" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+        <p style="font-size: 0.8em; color: #888; margin-top: 5px;">Feature-Based (CLIP-D)</p>
+    </div>
+    <div style="flex: 1; min-width: 300px;">
+        <img src="/images/plot_kde_NPR.png" alt="KDE Plot NPR" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+        <p style="font-size: 0.8em; color: #888; margin-top: 5px;">End-to-End (NPR)</p>
+    </div>
+  </div>
+  
+  <figcaption style="font-size: 0.9em; color: #666; margin-top: 15px;">
+    <strong>Figure 1-2: The "Distribution Shift".</strong> comparison. 
+    On the left (CLIP-D), curves overlap, showing robustness. 
+    On the right (NPR), the yellow curve (FP4) shifts left compared to the purple baseline (FP32), indicating that the detector fails under aggressive quantization.
   </figcaption>
 </figure>
 
