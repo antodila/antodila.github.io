@@ -7,8 +7,8 @@ date: 2026-01-30
 venue: "High Performance Computing (2026)"
 excerpt: "High-performance implementation using Hybrid MPI+OpenMP; Self-Tuning Kernel, distributed matrix construction, and scaling on biological datasets."
 header:
-  teaser: /assets/images/spectral_clustering_result.png
-  overlay_image: /assets/images/spectral_clustering_result.png
+  teaser: /images/spectral_clustering_result.png
+  overlay_image: /images/spectral_clustering_result.png
   overlay_filter: 0.5 # Scurisce leggermente l'immagine per leggere meglio il titolo
 ---
 
