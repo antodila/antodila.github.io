@@ -56,7 +56,7 @@ This work suggests that as Edge AI becomes standard, future detectors must inclu
     <i class="fab fa-github"></i> View Source Code
   </a>
   
-  <a href="/files/MDS_Final_Presentation.pdf" class="btn btn--info">
+  <a href="/files/MDS_final_presentation.pdf" class="btn btn--info">
     <i class="fas fa-file-pdf"></i> View Presentation
   </a>
 </div>
