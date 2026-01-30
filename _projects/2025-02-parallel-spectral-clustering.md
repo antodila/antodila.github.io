@@ -25,7 +25,7 @@ Tested on the **University of Trento HPC cluster**, the solution demonstrates st
     <i class="fab fa-github"></i> View Source Code
   </a>
   
-  <a href="/assets/docs/HPC_Report_Spectral_Clustering.pdf" class="btn btn--info">
+  <a href="/files/HPC_Report_Spectral_Clustering.pdf" class="btn btn--info">
     <i class="fas fa-file-pdf"></i> Read Full Report
   </a>
 </div>
