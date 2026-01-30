@@ -33,7 +33,9 @@ The study utilized Kernel Density Estimation (KDE) plots to visualize the distri
 <figure style="text-align: center; margin: 20px 0;">
   <img src="/images/plot_kde_CLIP-D.png" alt="KDE Plot showing distribution shift" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
   <figcaption style="font-size: 0.9em; color: #666; margin-top: 5px;">
-    Figure 1: The "Distribution Shift". The yellow curve (FP4) shifts left compared to the purple baseline (FP32), indicating that the detector fails to distinguish fake images from real ones under aggressive quantization.
+    <img src="/images/plot_kde_NPR.png" alt="KDE Plot showing distribution shift" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+  <figcaption style="font-size: 0.9em; color: #666; margin-top: 5px;">
+    Figure 1-2: The "Distribution Shift". The yellow curve (FP4) shifts left compared to the purple baseline (FP32), indicating that the detector fails to distinguish fake images from real ones under aggressive quantization.
   </figcaption>
 </figure>
 
