@@ -52,7 +52,7 @@ The study utilized Kernel Density Estimation (KDE) plots to visualize the distri
 This work suggests that as Edge AI becomes standard, future detectors must include quantized samples in their training data to ensure security.
 
 <div style="display: flex; gap: 10px; margin-top: 30px; margin-bottom: 30px;">
-  <a href="[#](https://github.com/antodila/quantization-deepfake-detection)" class="btn btn--primary">
+  <a href="https://github.com/antodila/quantization-deepfake-detection" class="btn btn--primary">
     <i class="fab fa-github"></i> View Source Code
   </a>
   
