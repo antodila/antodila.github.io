@@ -7,7 +7,7 @@ date: 2026-01-14
 venue: "Multimedia Data Security (2025-2026)"
 excerpt: "Comprehensive study on how 4-bit quantization (FP4) in SOTA diffusion models (SD3, Flux.1) acts as an adversarial attack against forensic detectors."
 header:
-  teaser: /images/deepfake_heatmap_teaser.png
+  teaser: /images/plot_heatmap_summary.png
   overlay_image: /images/deepfake_header.png
   overlay_filter: 0.5
 ---
@@ -31,7 +31,7 @@ The analysis revealed a critical vulnerability in the current generation of fore
 The study utilized Kernel Density Estimation (KDE) plots to visualize the distribution shift caused by quantization.
 
 <figure style="text-align: center; margin: 20px 0;">
-  <img src="/images/kde_plot_sd3.png" alt="KDE Plot showing distribution shift" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+  <img src="/images/plot_kde_CLIP-D.png" alt="KDE Plot showing distribution shift" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
   <figcaption style="font-size: 0.9em; color: #666; margin-top: 5px;">
     Figure 1: The "Distribution Shift". The yellow curve (FP4) shifts left compared to the purple baseline (FP32), indicating that the detector fails to distinguish fake images from real ones under aggressive quantization.
   </figcaption>
@@ -44,7 +44,7 @@ This work suggests that as Edge AI becomes standard, future detectors must inclu
     <i class="fab fa-github"></i> View Source Code
   </a>
   
-  <a href="/files/MDS_Deepfake_Presentation.pdf" class="btn btn--info">
+  <a href="/files/MDS_Final_Presentation.pdf" class="btn btn--info">
     <i class="fas fa-file-pdf"></i> View Presentation
   </a>
 </div>
