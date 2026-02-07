@@ -1,37 +1,51 @@
 ---
 layout: single
-title: "Hybrid Parallel Spectral Clustering (MPI + OpenMP)"
+title: "Extreme-Scale Spectral Clustering (Hybrid MPI + OpenMP)"
 collection: projects
 permalink: /projects/mpi-spectral-clustering/
-date: 2026-01-30
+date: 2026-02-07
 venue: "High Performance Computing (2026)"
-excerpt: "High-performance implementation using Hybrid MPI+OpenMP; Self-Tuning Kernel, distributed matrix construction, and scaling on biological datasets."
+excerpt: "A distributed HPC engine capable of clustering 2 million points. Features Nyström Approximation, Cache Blocking, and Self-Tuning Kernels for biological data analysis."
 header:
   teaser: /images/spectral_clustering_result.png
   overlay_image: /images/spectral_clustering_result.png
-  overlay_filter: 0.5 # Scurisce leggermente l'immagine per leggere meglio il titolo
+  overlay_filter: 0.5
 ---
 
 A high-performance implementation of the **Spectral Clustering** algorithm designed for distributed HPC environments.
-This project addresses the computational bottlenecks of clustering large-scale datasets (the $O(N^2)$ memory and $O(N^3)$ compute complexity) by adopting a **Hybrid Parallel Architecture**.
 
-### 🚀 Key Features
-* **Hybrid Parallelism:** Combines **MPI** for distributed memory communication across nodes and **OpenMP** for shared memory multithreading within nodes.
-* **Self-Tuning Kernel:** Implements the *Zelnik-Manor & Perona* adaptive scaling to correctly cluster multi-density datasets.
-* **Optimized Memory:** Efficient row-based decomposition to distribute the Similarity Matrix construction load.
-* **Real-World Application:** Validated on synthetic benchmarks and scaled to the **Mouse Cell Atlas (MCA)** biological dataset (~20k single cells).
+This project overcomes the traditional **Memory Wall** ($O(N^2)$) and **Compute Wall** ($O(N^3)$) of spectral methods. By transitioning from a standard exact solver to a **Distributed Nyström Approximation**, the system scales from small biological datasets to massive synthetic benchmarks (**2,000,000 points**) on standard cluster hardware.
 
-### 📊 Visual Results & Performance
-The algorithm successfully identifies non-convex clusters (spirals, circles) that standard K-Means fails to separate.
+### 🚀 Key Technical Highlights
+
+* **Hybrid Parallel Architecture:**
+    * **Inter-Node (MPI):** Handles coarse-grained tasks like data distribution (Row-Block layout) and global synchronization (Landmark selection).
+    * **Intra-Node (OpenMP):** Maximizes core utilization with multi-threading for distance calculations and matrix operations.
+
+* **Algorithmic Optimizations:**
+    * **Distributed Nyström Approximation:** Reduces spectral complexity from $O(N^3)$ to $O(S^3)$ by computing affinity against a subset of global landmarks ($S \ll N$).
+    * **Zero-Network Projection:** Local calculation of spectral embeddings ($U_{local} = W_{local} \times U_S \Lambda_S^{-1/2}$) eliminating expensive collective communication.
+    * **Single-Pass Distributed K-Means:** Optimized convergence strategy leveraging the high separability of the spectral embedding.
+
+* **Hardware-Aware Design:**
+    * **Cache Blocking (Tiling):** Matrix operations are tiled (block size 64) to fit in L1/L2 cache, minimizing latency.
+    * **SIMD Vectorization:** Data layout ensures efficient use of CPU vector units for Euclidean distance kernels.
+
+### 🧬 Biological Validation & Scaling
+
+The system was designed with a dual-mode engine to balance **Topological Precision** and **Extreme Scalability**:
+
+1.  **Quality Mode (Exact Kernel):** Validated on the **Mouse Cell Atlas (MCA)** dataset (~20k single cells). Used **Self-Tuning Kernels** (Zelnik-Manor & Perona) to correctly identify non-convex biological manifolds (tissues) despite multi-scale densities.
+2.  **Throughput Mode (Nyström):** Benchmarked on the **University of Trento HPC Cluster**, achieving linear scaling up to **2,000,000 points**, effectively breaking the 32 TB memory requirement of the naive approach.
+
+### 📊 Visual Results
 
 <figure style="text-align: center; margin: 20px 0;">
   <img src="/images/spectral_clustering_result.png" alt="Spectral Clustering Results" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
   <figcaption style="font-size: 0.9em; color: #666; margin-top: 5px;">
-    Figure 1: Clustering results on the synthetic benchmark dataset (N=7,500).
+    Figure 1: Topological recovery of non-convex structures (spirals, circles) on the adversarial benchmark dataset.
   </figcaption>
 </figure>
-
-Tested on the **University of Trento HPC cluster**, the solution demonstrates strong scalability and significant speedup compared to the sequential implementation.
 
 <div style="display: flex; gap: 10px; margin-top: 30px; margin-bottom: 30px;">
   <a href="https://github.com/SincereJuliya/HPC" class="btn btn--primary">
