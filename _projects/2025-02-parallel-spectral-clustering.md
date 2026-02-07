@@ -14,29 +14,29 @@ header:
 
 A high-performance implementation of the **Spectral Clustering** algorithm designed for distributed HPC environments.
 
-This project overcomes the traditional **Memory Wall** ($O(N^2)$) and **Compute Wall** ($O(N^3)$) of spectral methods. By transitioning from a standard exact solver to a **Distributed Nyström Approximation**, the system scales from small biological datasets to massive synthetic benchmarks (**2,000,000 points**) on standard cluster hardware.
+This project overcomes the traditional **Memory Wall** (O(N²)) and **Compute Wall** (O(N³)) of spectral methods. By transitioning from a standard exact solver to a **Distributed Nyström Approximation**, the system scales from small biological datasets to massive synthetic benchmarks (**2,000,000 points**) on standard cluster hardware.
 
 ### 🚀 Key Technical Highlights
 
-* **Hybrid Parallel Architecture:**
-    * **Inter-Node (MPI):** Handles coarse-grained tasks like data distribution (Row-Block layout) and global synchronization (Landmark selection).
-    * **Intra-Node (OpenMP):** Maximizes core utilization with multi-threading for distance calculations and matrix operations.
+**Hybrid Parallel Architecture:**
+* **Inter-Node (MPI):** Handles coarse-grained tasks like data distribution (Row-Block layout) and global synchronization (Landmark selection).
+* **Intra-Node (OpenMP):** Maximizes core utilization with multi-threading for distance calculations and matrix operations.
 
-* **Algorithmic Optimizations:**
-    * **Distributed Nyström Approximation:** Reduces spectral complexity from $O(N^3)$ to $O(S^3)$ by computing affinity against a subset of global landmarks ($S \ll N$).
-    * **Zero-Network Projection:** Local calculation of spectral embeddings ($U_{local} = W_{local} \times U_S \Lambda_S^{-1/2}$) eliminating expensive collective communication.
-    * **Single-Pass Distributed K-Means:** Optimized convergence strategy leveraging the high separability of the spectral embedding.
+**Algorithmic Optimizations:**
+* **Distributed Nyström Approximation:** Reduces spectral complexity from O(N³) to O(S³) by computing affinity against a subset of global landmarks (S << N).
+* **Zero-Network Projection:** Local calculation of spectral embeddings (`U_local = W_local × U_S Λ_S⁻½`) eliminating expensive collective communication.
+* **Single-Pass Distributed K-Means:** Optimized convergence strategy leveraging the high separability of the spectral embedding.
 
-* **Hardware-Aware Design:**
-    * **Cache Blocking (Tiling):** Matrix operations are tiled (block size 64) to fit in L1/L2 cache, minimizing latency.
-    * **SIMD Vectorization:** Data layout ensures efficient use of CPU vector units for Euclidean distance kernels.
+**Hardware-Aware Design:**
+* **Cache Blocking (Tiling):** Matrix operations are tiled (block size 64) to fit in L1/L2 cache, minimizing latency.
+* **SIMD Vectorization:** Data layout ensures efficient use of CPU vector units for Euclidean distance kernels.
 
 ### 🧬 Biological Validation & Scaling
 
 The system was designed with a dual-mode engine to balance **Topological Precision** and **Extreme Scalability**:
 
-1.  **Quality Mode (Exact Kernel):** Validated on the **Mouse Cell Atlas (MCA)** dataset (~20k single cells). Used **Self-Tuning Kernels** (Zelnik-Manor & Perona) to correctly identify non-convex biological manifolds (tissues) despite multi-scale densities.
-2.  **Throughput Mode (Nyström):** Benchmarked on the **University of Trento HPC Cluster**, achieving linear scaling up to **2,000,000 points**, effectively breaking the 32 TB memory requirement of the naive approach.
+* **Quality Mode (Exact Kernel):** Validated on the **Mouse Cell Atlas (MCA)** dataset (~20k single cells). Used **Self-Tuning Kernels** (Zelnik-Manor & Perona) to correctly identify non-convex biological manifolds (tissues) despite multi-scale densities.
+* **Throughput Mode (Nyström):** Benchmarked on the **University of Trento HPC Cluster**, achieving linear scaling up to **2,000,000 points**, effectively breaking the 32 TB memory requirement of the naive approach.
 
 ### 📊 Visual Results
 
